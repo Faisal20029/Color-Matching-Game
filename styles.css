@@ -1,0 +1,49 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#instruction {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#target-color {
+  font-weight: bold;
+  color: blue;
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+#score, #timer {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #333;
+}

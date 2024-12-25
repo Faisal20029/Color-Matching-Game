@@ -1,0 +1,35 @@
+-- Step 1: Create the database
+CREATE DATABASE ColorMatchingGame;
+
+-- Step 2: Use the database
+USE ColorMatchingGame;
+
+-- Step 3: Create the Scores table
+CREATE TABLE Scores (
+    id INT AUTO_INCREMENT PRIMARY KEY,        -- Unique identifier for each score
+    player_name VARCHAR(100) NOT NULL,        -- Name of the player
+    score INT NOT NULL,                       -- The score achieved by the player
+    played_at DATETIME DEFAULT CURRENT_TIMESTAMP -- Timestamp of the game session
+);
+
+-- Step 4: Insert example data into the Scores table
+INSERT INTO Scores (player_name, score) 
+VALUES 
+('Faisal', 25), 
+('Aisha', 30), 
+('Rahim', 18);
+
+-- Step 5: Retrieve the top 10 high scores
+SELECT player_name, score, played_at 
+FROM Scores 
+ORDER BY score DESC 
+LIMIT 10;
+
+-- Step 6: Delete scores (Optional, to clear the table)
+-- DELETE FROM Scores;
+
+-- Step 7: Drop the table (Optional, if you want to remove the table entirely)
+-- DROP TABLE Scores;
+
+-- Step 8: Drop the database (Optional, if you want to remove the database entirely)
+-- DROP DATABASE ColorMatchingGame;
